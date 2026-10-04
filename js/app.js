@@ -48,7 +48,7 @@ function mostrarResultados() {
     });
 
     listaAlumnos.forEach(function (alumno, i) {
-        contenidoHTML += `<p><strong>Alumno ${i + 1}:</strong> ${alumno.nombre} | Notas: ${alumno.notas[0]}, ${alumno.notas[1]}, ${alumno.notas[2]} | <strong>Promedio:</strong> ${alumno.promedio.toFixed(1)}</p>`;
+        contenidoHTML += `<p>Alumno ${i + 1}: ${alumno.nombre} | Notas: ${alumno.notas[0]}, ${alumno.notas[1]}, ${alumno.notas[2]} | Promedio: ${alumno.promedio.toFixed(1)}</p>`;
     });
 
     if (listaAlumnos.length > 0) {
@@ -62,14 +62,15 @@ function mostrarResultados() {
 
         contenidoHTML += `
             <hr>
-            <h3>Estadísticas del Curso</h3>
-            <p><strong>Promedio Certamen 1:</strong> ${promC1.toFixed(1)}</p>
-            <p><strong>Promedio Certamen 2:</strong> ${promC2.toFixed(1)}</p>
-            <p><strong>Promedio Certamen 3:</strong> ${promC3.toFixed(1)}</p>
-            <p><strong>Promedio General:</strong> ${promGeneral.toFixed(1)}</p>
-            <p><strong>Aprobados (>=55):</strong> ${aprobados} | <strong>Reprobados (<55):</strong> ${reprobados}</p>
+            <h2>Estadísticas del Curso</h2>
+            <p>Promedio Certamen 1: ${promC1.toFixed(1)}</p>
+            <p>Promedio Certamen 2: ${promC2.toFixed(1)}</p>
+            <p>Promedio Certamen 3: ${promC3.toFixed(1)}</p>
+            <p>Promedio General: ${promGeneral.toFixed(1)}</p>
+            <p>Aprobados: ${aprobados}</p>
+            <p>Reprobados: ${reprobados}</p>
             <hr>
-            <h3>Ranking del Curso</h3>
+            <h2>Ranking del Curso</h2>
             <ol>
         `;
 
